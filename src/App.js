@@ -3,13 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "mapbox-gl/dist/mapbox-gl.css";
 
-mapboxgl.accessToken = process.env.MAP_BOX_API || "";
+mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX_API;
 
 export const App = () => {
   const mapContainerRef = useRef(null);
 
   // Initialize map when component mounts
   useEffect(() => {
+
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/streets-v11",
@@ -27,5 +28,11 @@ export const App = () => {
     return () => map.remove();
   }, []);
 
-  return <div className="map-container" ref={mapContainerRef} />;
+  return (
+    <>
+      <div className="map-container" ref={mapContainerRef} />
+    </>
+  );
 };
+
+export default App;
