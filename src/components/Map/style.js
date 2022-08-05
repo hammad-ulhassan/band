@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 const MapContainer = styled.div`
   position: absolute;
-  top: 10%;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
+  z-index: -1;;
 `;
 
 const MapSideBar = styled.section`
