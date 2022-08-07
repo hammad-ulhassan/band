@@ -7,10 +7,6 @@ const instance = axios.create({
       }
   });
 
-const getArtist = (artist) => instance.get(`${artist}`);
+export const getArtist = (artist) => instance.get(`${artist}`);
 
-const api = {
-    getArtist
-}
-
-export default api;
+export const getEvents = (artist) => instance.get(`${artist}/events`)
