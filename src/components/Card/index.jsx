@@ -12,11 +12,11 @@ library.add(faClock, faCalendarAlt, faExternalLinkSquare);
 
 const Card = ({ venue, onClick, isActive }) => {
   return (
-    <div
+    <article
       onClick={onClick}
       className={`${
         isActive ? " bg-red-800 bg-opacity-60 shadow-lg shadow-cyan-500/50" : ""
-      } text-white shrink-0 border box-border m-0 ring-gray-500 backdrop-blur-md rounded border-gray-400 h-36 w-64 p-2 max-width `}
+      } text-white shrink-0 border box-border m-0 ring-gray-500 backdrop-blur-md rounded border-gray-400 h-36 w-64 p-2 max-width cursor-pointer`}
     >
       <div
         className={`${
@@ -38,7 +38,7 @@ const Card = ({ venue, onClick, isActive }) => {
         <span>{venue.region}</span>
         <span>{venue.country}</span>
       </div>
-    </div>
+    </article>
   );
 };
 

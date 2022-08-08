@@ -4,8 +4,8 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import constants from "./constants";
 import style from "./style";
 
-const Map = ({ apiKey, venues, selectedVenue }) => {
-  mapboxgl.accessToken = apiKey;
+const Map = ({ venues, selectedVenue }) => {
+  mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX_API;
 
   const mapContainerRef = useRef(null);
   const map = useRef(null);
