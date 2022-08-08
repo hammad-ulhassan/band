@@ -11,7 +11,12 @@
 2. Events' Venues would show at the bottom with details
 
 ## Caveats
-1. I tried to deploy on `Netlify` but Mapbox is broken for production. 
+1. I tried to deploy on `Netlify` but Mapbox is broken for production.
+
+## Architecture
+![bands_arch](https://user-images.githubusercontent.com/47918863/183413258-5ccfc01a-1e1f-4364-b00b-af40a781f6ec.jpeg)
+
+architechture of the app is shown here
 
 
 
