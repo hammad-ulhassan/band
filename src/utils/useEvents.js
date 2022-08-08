@@ -7,7 +7,12 @@ const useEvents = (eventsObj) => {
   const extractVenues = useCallback(() => {
     const allVenues = [];
     events?.map((event) =>
-      allVenues.push({ id: event?.id, venue: event?.venue })
+      allVenues.push({
+        id: event?.id,
+        venue: event?.venue,
+        startsAt: !!!event?.starts_at ? null : event?.starts_at,
+        endsAt: !!!event?.ends_at ? null : event?.ends_at,
+      })
     );
     setVenues(allVenues);
   }, [events]);
