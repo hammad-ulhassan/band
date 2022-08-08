@@ -10,8 +10,8 @@ const useEvents = (eventsObj) => {
       allVenues.push({
         id: event?.id,
         venue: event?.venue,
-        startsAt: !!!event?.starts_at ? null : event?.starts_at,
-        endsAt: !!!event?.ends_at ? null : event?.ends_at,
+        startsAt: event?.starts_at,
+        endsAt: event?.ends_at,
       })
     );
     setVenues(allVenues);

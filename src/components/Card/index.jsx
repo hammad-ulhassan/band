@@ -4,7 +4,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faClock,
   faCalendarAlt,
-  faExternalLinkSquare
+  faExternalLinkSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
@@ -12,7 +12,7 @@ import { dateFormat, timeFormat } from "./constants";
 
 library.add(faClock, faCalendarAlt, faExternalLinkSquare);
 
-const Card = ({ venue, onClick, isActive }) => {
+const Card = ({ venue, startsAt, endsAt, onClick, isActive }) => {
   return (
     <article
       onClick={onClick}
@@ -28,17 +28,13 @@ const Card = ({ venue, onClick, isActive }) => {
         <div className="flex flex-row gap-2 align-middle items-center">
           <FontAwesomeIcon icon="calendar-alt" />
           <span>
-            {
-              moment(venue.startsAt).format(`${dateFormat}`)
-            }
+            {startsAt ? moment(startsAt).format(`${dateFormat}`) : "-"}
           </span>
         </div>
         <div className="flex flex-row gap-2 align-middle items-center">
           <FontAwesomeIcon icon="clock" />
           <span>
-            {
-              moment(venue.startsAt).format(`${timeFormat}`)
-            }
+            {startsAt ? moment(startsAt).format(`${timeFormat}`) : "-"}
           </span>
         </div>
         <span>

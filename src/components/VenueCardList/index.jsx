@@ -9,6 +9,8 @@ const VenueCardList = ({venues, cardClicked, selectedVenue}) => {
           <Card
             key={i}
             venue={v.venue}
+            startsAt={v.startsAt}
+            endsAt={v.endsAt}
             onClick={() => cardClicked(v)}
             isActive={selectedVenue && v.id === selectedVenue.id}
           />
