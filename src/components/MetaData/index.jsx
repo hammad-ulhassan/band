@@ -10,8 +10,8 @@ const MetaData = ({imageUrl, artistName, links}) => {
           <ul className=" flex flex-row gap-2">
             {links &&
               links.length &&
-              links.map((link) => (
-                <li>
+              links.map((link, i) => (
+                <li key={link.type}>
                   <a href={link.url} className=" underline">
                     {link.type}
                   </a>

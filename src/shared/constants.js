@@ -1,9 +1,3 @@
-const APP_TITLE = "Singers";
+export const APP_TITLE = "Singers";
 
-
-const constants = {
-    APP_TITLE
-};
-
-
-export default constants;
+export const NO_RECORD_FOUND = 'No Record Found';
