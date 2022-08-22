@@ -5,7 +5,8 @@ import constants from "./constants";
 import style from "./style";
 
 const Map = ({ venues, selectedVenue }) => {
-  mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX_API;
+  // mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX_API;
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYWdoYTU1NSIsImEiOiJjanBjd3ZzMXowNTV5M3FtcmRhZmlnczhjIn0.rt9R6DfV-ceirBBcIMkBzg';
 
   const mapContainerRef = useRef(null);
   const map = useRef(null);
@@ -17,7 +18,7 @@ const Map = ({ venues, selectedVenue }) => {
     map.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: constants.mapStyle.dark,
-      center: [-87.65, 41.84],
+      center: [-87.65, 41.84], //chicago
       zoom: constants.defaultZoomLevel,
     });
   }, []);
